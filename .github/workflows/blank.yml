@@ -15,6 +15,6 @@ jobs:
     - name: Snyk version
       run: echo "${{ steps.snyk.outputs.version }}"
     - name: Snyk iac test
-      run: snyk test --iac
+      run: snyk test iac
       env:
         SNYK_TOKEN: ${{ secrets.SNYK_TOKEN }}
