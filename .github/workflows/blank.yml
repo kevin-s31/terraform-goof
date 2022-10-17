@@ -8,10 +8,8 @@ jobs:
     - uses: snyk/actions/setup@master
       id: snyk
       with:
-        snyk-version: v1.391.0
-    - uses: actions/setup-go@v1
-      with:
-        go-version: "1.13"
+        snyk-version: latest
         args: --iac
       env:
         SNYK_TOKEN: ${{ secrets.SNYK_TOKEN }}
+  
